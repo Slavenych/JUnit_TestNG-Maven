@@ -6,11 +6,10 @@ import org.junit.experimental.categories.Category;
 
 import static org.junit.Assert.assertEquals;
 
-@Category ( Regression.class )
 public class SimpleTestClass {
 
   Calculator calc = new Calculator();
-
+//this is first example test.
   @Test
   public void testAddTwoPositiveValues() {
     int actualResult = calc.add(10, 5);
@@ -21,20 +20,26 @@ public class SimpleTestClass {
   //add tests for new methods (multiply, division, subtraction, square root, x^2)
 
   @Test
-  public void testSubtraction(){
+  public void testSubtraction ( ) {
     int actualResult = calc.subtractionMethodAdd ( 100, 33 );
-    assertEquals ("100 - 33 = 67",65, actualResult);
+    int expectedResult = 67;
+    assertEquals ( "100 - 33 = 67", expectedResult, actualResult );
   }
+
   @Test
-  public void testMultiplication(){
-    int actualResult = calc.multiplicationMethodAdd ( 10,3 );
-    assertEquals ( "10 * 3 = 30", 31, actualResult );
+  public void testMultiplication ( ) {
+    int actualResult = calc.multiplicationMethodAdd ( 10, 3 );
+    int expectedResult = 30;
+    assertEquals ( "10 * 3 = 30", expectedResult, actualResult );
   }
+
   @Test
-  public void testDivision(){
-    int actualResult = calc.divisionMethodAdd ( 100,10 );
-    assertEquals ( "100 / 10 = 10",10, actualResult );
+  public void testDivision ( ) {
+    int actualResult = calc.divisionMethodAdd ( 100, 10 );
+    int expectedResult = 10;
+    assertEquals ( "100 / 10 = 10", expectedResult, actualResult );
   }
+
 //  @Test
 //  public void testSquareRoot(){
 //    double actualResult = calc.squareRootMethod ( 20 );
